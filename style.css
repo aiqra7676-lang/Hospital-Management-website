@@ -1,0 +1,680 @@
+/* =========================
+   Global Styling
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+    scroll-behavior:smooth;
+}
+
+
+body{
+    background:#f5f9fc;
+    color:#333;
+}
+
+
+section{
+    padding:70px 8%;
+}
+
+
+h2{
+    text-align:center;
+    font-size:35px;
+    color:#0077b6;
+    margin-bottom:40px;
+}
+
+
+/* =========================
+   Navbar
+========================= */
+
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+
+}
+
+
+.logo{
+
+    color:#0077b6;
+    font-size:28px;
+
+}
+
+
+.logo i{
+    color:#00b4d8;
+}
+
+
+
+.nav-links{
+
+    display:flex;
+    list-style:none;
+    gap:25px;
+
+}
+
+
+.nav-links a{
+
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+
+.nav-links a:hover{
+
+    color:#0077b6;
+
+}
+
+
+
+#theme-btn{
+
+    border:none;
+    background:#0077b6;
+    color:white;
+    padding:10px;
+    border-radius:50%;
+    cursor:pointer;
+
+}
+
+
+
+.hamburger{
+
+    display:none;
+    font-size:25px;
+    cursor:pointer;
+
+}
+
+
+
+
+
+/* =========================
+      Hero Section
+========================= */
+
+
+.hero{
+
+    height:90vh;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(
+    rgba(0,119,182,.7),
+    rgba(0,180,216,.6)),
+    url("images/hospital.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+
+
+.hero-content{
+
+    color:white;
+    max-width:600px;
+    animation:slide 1s ease;
+
+}
+
+
+.hero h1{
+
+    font-size:50px;
+    margin-bottom:20px;
+
+}
+
+
+.hero p{
+
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:30px;
+
+}
+
+
+
+.btn{
+
+    display:inline-block;
+    padding:14px 30px;
+    background:white;
+    color:#0077b6;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+
+}
+
+
+.btn:hover{
+
+    background:#023e8a;
+    color:white;
+
+}
+
+
+
+
+@keyframes slide{
+
+from{
+
+transform:translateY(50px);
+opacity:0;
+
+}
+
+to{
+
+transform:translateY(0);
+opacity:1;
+
+}
+
+}
+
+
+
+
+/* =========================
+     About
+========================= */
+
+
+#about p{
+
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+    line-height:1.8;
+
+}
+
+
+
+
+/* =========================
+     Cards
+========================= */
+
+
+.department-container,
+.doctor-container,
+.package-container{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+
+}
+
+
+
+.card,
+.doctor-card{
+
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.4s;
+
+}
+
+
+.card:hover,
+.doctor-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+
+
+.card i{
+
+    font-size:40px;
+    color:#0077b6;
+    margin-bottom:20px;
+
+}
+
+
+
+.card h3,
+.doctor-card h3{
+
+    margin-bottom:10px;
+    color:#023e8a;
+
+}
+
+
+
+
+
+/* =========================
+      Doctors
+========================= */
+
+
+.doctor-card img{
+
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+/* =========================
+ Appointment Form
+========================= */
+
+
+#appointment-form{
+
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+
+
+#appointment-form input,
+#appointment-form select,
+#appointment-form textarea{
+
+
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+
+}
+
+
+
+#appointment-form textarea{
+
+    height:120px;
+
+}
+
+
+
+#appointment-form button{
+
+    width:100%;
+    padding:15px;
+    background:#0077b6;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:18px;
+
+}
+
+
+
+#appointment-form button:hover{
+
+    background:#023e8a;
+
+}
+
+
+
+
+
+/* =========================
+ Reviews
+========================= */
+
+
+.review{
+
+    max-width:600px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+
+}
+
+
+
+
+
+
+
+/* =========================
+ FAQ
+========================= */
+
+
+.faq-box{
+
+    background:white;
+    padding:20px;
+    margin:15px auto;
+    max-width:700px;
+    border-radius:10px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+
+}
+
+
+.faq-box h3{
+
+    color:#0077b6;
+
+}
+
+
+
+
+/* =========================
+ Contact
+========================= */
+
+
+#contact{
+
+    text-align:center;
+    background:#eaf7ff;
+
+}
+
+
+#contact p{
+
+    margin:15px;
+    font-size:18px;
+
+}
+
+
+
+
+/* =========================
+ Footer
+========================= */
+
+
+footer{
+
+    background:#023e8a;
+    color:white;
+    text-align:center;
+    padding:30px;
+
+}
+
+
+
+
+
+
+/* Scroll Button */
+
+#scrollTop{
+
+    position:fixed;
+    right:25px;
+    bottom:25px;
+
+    background:#0077b6;
+    color:white;
+    border:none;
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+    cursor:pointer;
+    font-size:20px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+ Dark Mode
+========================= */
+
+
+.dark{
+
+    background:#121212;
+    color:white;
+
+}
+
+
+.dark header{
+
+    background:#1e1e1e;
+
+}
+
+
+.dark .card,
+.dark .doctor-card,
+.dark #appointment-form,
+.dark .review,
+.dark .faq-box{
+
+    background:#222;
+    color:white;
+
+}
+
+
+
+
+
+
+/* =========================
+ Responsive Design
+========================= */
+
+
+@media(max-width:992px){
+
+
+.department-container,
+.doctor-container,
+.package-container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+
+.nav-links{
+
+gap:15px;
+
+}
+
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+}
+
+
+
+
+
+@media(max-width:768px){
+
+
+.nav-links{
+
+position:absolute;
+top:80px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+align-items:center;
+padding:20px;
+
+display:none;
+
+}
+
+
+
+.nav-links.active{
+
+display:flex;
+
+}
+
+
+
+.hamburger{
+
+display:block;
+
+}
+
+
+
+#theme-btn{
+
+margin-left:auto;
+margin-right:20px;
+
+}
+
+
+
+.department-container,
+.doctor-container,
+.package-container{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.hero{
+
+height:80vh;
+
+}
+
+
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+
+
+section{
+
+padding:50px 5%;
+
+}
+
+
+
+}
+
+
+
+@media(max-width:480px){
+
+
+.logo{
+
+font-size:22px;
+
+}
+
+
+.hero p{
+
+font-size:15px;
+
+}
+
+
+h2{
+
+font-size:28px;
+
+}
+
+
+}
